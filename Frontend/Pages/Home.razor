@@ -34,12 +34,12 @@ Welcome to your new app. <br />
 
 @code {
 
-    private async Task GetPodCasts()
+    private async Task GetPodCasts() 
     {
         try
         {
             _isLoading = true;
-            _podCasts = await HttpClient.GetFromJsonAsync<List<string?>>("https://localhost:7248/podcasts") ?? new List<string?>();
+            _podCasts = await HttpClient.GetFromJsonAsync<List<string?>>("http://localhost:17860/podcasts") ?? new List<string?>();
             await Task.Delay(120);
         }
         finally

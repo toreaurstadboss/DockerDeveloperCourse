@@ -51,7 +51,7 @@ namespace DockerCourseWebApi
 
             app.MapGet("/podcasts", async () => {
 
-                var db = new SqlConnection("Server=tcp:localhost;Initial Catalog=podcasts;Persist Security Info=False;User ID=sa;Password=Dometrain#123;TrustServerCertificate=true;");
+                var db = new SqlConnection("Server=tcp:database,1433;Initial Catalog=Podcasts;Persist Security Info=False;User ID=sa;Password=Dometrain#123;TrustServerCertificate=true;");
 
                 var podcasts = (await db.QueryAsync<PodCasts>("SELECT Id, Title FROM Podcasts")).Select(x => x.Title).ToList();              
 
