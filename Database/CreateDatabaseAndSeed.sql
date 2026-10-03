@@ -4,6 +4,8 @@ BEGIN
 END;
 GO
 
+"Connecting Podcasts..."
+
 USE Podcasts;
 GO
 
@@ -13,16 +15,24 @@ BEGIN
 END;
 GO
 
+PRINT "Dropping table Podcasts..."
+
 CREATE TABLE dbo.Podcasts(
     Id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
     Title NVARCHAR(100) NOT NULL
 );
 GO
 
+PRINT "Create table Podcasts...."
+
 INSERT INTO dbo.Podcasts (Title) VALUES
-    ('.NET Rocks Podcasts'),
+    ('.NET Rocks Podcasts'), 
     ('The .NET Rocks! Podcast covers .NET development topics.'),
     ('Azure Podcasts'),
     ('AWS Podcasts'),
     ('MSDN Daily'),
     ('Python Programmer Podcasts')
+
+
+
+PRINT "Inserting to Podcasts table rows.."

@@ -21,7 +21,7 @@ docker run `
 
     "Deleting SQL Server container..."
 
-    docker r -f sqlserver-withvol .\.git
+    docker rm -f sqlserver-withvol .\.git
     
 
     "Listing all container..." 
@@ -33,13 +33,13 @@ docker run `
     docker volume ls 
 
 
-    "Creaing another SQL Server using the same volume..."
+    "Creating another SQL Server using the same volume..."
 
-    docker run `
-        --name sqlserver-withvol `
-        -e "ACCEPT_EULA=Y" `
-        -e "MSSQL_SA_PASSWORD=Dometrain#123"
-        -p 1433:1433 `
-        -d `
-        -v sqldb-data:/var/opt/mssql `
-        mcr.microsoft.com/mssql/server:2022-latest
+docker run `
+    --name sqlserver-withvol `
+    -e "ACCEPT_EULA=Y_"  `
+    -e "MSSQL_SA_PASSWORD=Dometrain#123" `
+    -p "1433:1433" `
+    -d `
+    -v sqldb-data:/var/opt/mssql  `
+    mcr.microsoft.com/mssql/server:2022-latest   
