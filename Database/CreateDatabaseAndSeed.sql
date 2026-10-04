@@ -4,7 +4,7 @@ BEGIN
 END;
 GO
 
-"Connecting Podcasts..."
+PRINT 'Connecting Podcasts...'
 
 USE Podcasts;
 GO
@@ -15,7 +15,7 @@ BEGIN
 END;
 GO
 
-PRINT "Dropping table Podcasts..."
+PRINT 'Dropping table Podcasts...'
 
 CREATE TABLE dbo.Podcasts(
     Id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
@@ -23,7 +23,7 @@ CREATE TABLE dbo.Podcasts(
 );
 GO
 
-PRINT "Create table Podcasts...."
+PRINT 'Create table Podcasts....'
 
 INSERT INTO dbo.Podcasts (Title) VALUES
     ('.NET Rocks Podcasts'), 
@@ -35,4 +35,6 @@ INSERT INTO dbo.Podcasts (Title) VALUES
 
 
 
-PRINT "Inserting to Podcasts table rows.."
+PRINT 'Inserting to Podcasts table rows..'
+
+SELECT * FROM Podcasts  
