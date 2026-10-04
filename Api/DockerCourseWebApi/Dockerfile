@@ -11,4 +11,11 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443 
 COPY --from=build /app/publish .
+
+# Create user appuser with -u  1001 : user ID -
+# safe non-priviledged user to run the application and with -m = create home direcotry
+
+RUN useradd -m -u 1001 appuser 
+USER appuser 
+
 ENTRYPOINT ["dotnet", "DockerCourseWebApi.dll"]
