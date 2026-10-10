@@ -20,7 +20,9 @@ The compose file publishes these ports locally:
 
 - `1234` for the frontend
 - `17860` for the API
-- `1433` for SQL Server
+- `14330` for SQL Server
+
+Connect to the database using `localhost, 14330` with the `sa` user and the password `Dometrain#123`. Use Sql Server authentication to connect.
 
 ## How To Run
 

@@ -10,7 +10,7 @@ docker run `
     --name sqlserver-withvol `
     -e "ACCEPT_EULA=Y_"  `
     -e "MSSQL_SA_PASSWORD=Dometrain#123" `
-    -p "1433:1433" `
+    -p "14330:1433" `
     -d `
     -v sqldb-data:/var/opt/mssql  `
     mcr.microsoft.com/mssql/server:2022-latest   

@@ -38,3 +38,4 @@ INSERT INTO dbo.Podcasts (Title) VALUES
 PRINT 'Inserting to Podcasts table rows..'
 
 SELECT * FROM Podcasts  
+order by id desc;
